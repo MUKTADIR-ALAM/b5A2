@@ -41,8 +41,21 @@ OFFSET 5;
 
 Primary Key হলো একটি কলাম অথবা একাধিক কলাম যা একটি টেবিলের প্রত্যেকটি row কে Uniquely চিহ্নিত করতে পারে | 
 
-Foreign Key হলো অন্য আরেকটি টেবিলের Primary Key যা দ্বারা ওই টেবিলের সাথে সম্পর্ক স্থাপন করা যায় | Foreign Key এর মাধ্যমে আমরা দুটি টেবিলের মান একত্রে একটি টেবিলে দেখাতে পারি |
+Foreign Key অন্য আরেকটি টেবিলের Primary Key যা দ্বারা ওই টেবিলের সাথে সম্পর্ক স্থাপন করা যায় | Foreign Key এর মাধ্যমে আমরা দুটি টেবিলের মান একত্রে একটি টেবিলে দেখাতে পারি |
 
+### **3️⃣ `sightings` Table**
+
+```markdown
+| sighting_id | species_id | ranger_id | location          | sighting_time        | notes                      |
+|-------------|------------|-----------|-------------------|----------------------|----------------------------|
+| 1           | 1          | 1         | Peak Ridge        | 2024-05-10 07:45:00  | Camera trap image captured |
+| 2           | 2          | 2         | Bankwood Area     | 2024-05-12 16:20:00  | Juvenile seen              |
+| 3           | 3          | 3         | Bamboo Grove East | 2024-05-15 09:10:00  | Feeding observed           |
+| 4           | 1          | 2         | Snowfall Pass     | 2024-05-18 18:30:00  | (NULL)                     |
+
+```
+
+উদাহরণস্বরূপ এখানে sighting_id হলো sightings টেবিলের Primary Key এবং species_id, ranger_id হলো এই টেবিলের জন্য Foreign key. যা আবার তাদের নিজেদের টেবিলে Primary key হিসেবে কাজ করে
 
 
 
